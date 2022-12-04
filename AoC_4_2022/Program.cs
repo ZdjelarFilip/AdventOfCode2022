@@ -9,8 +9,7 @@ var easy = gameData
 Console.WriteLine($"resultEasy: {easy.Select(group => group.First()
                                 .All(i => group.First()
                                 .Intersect(group.Last()).Contains(i)) ||
-                                 group.Last()
-                                .All(i => group.First()
+                                group.Last().All(i => group.First()
                                 .Intersect(group.Last()).Contains(i)))
                                 .Select(i => Convert.ToInt32(i))
                                 .Sum()}");
